@@ -1,3 +1,5 @@
+//commonly used algorithm
+
 public class QuickSort {
     private int array[];
     private int length;
