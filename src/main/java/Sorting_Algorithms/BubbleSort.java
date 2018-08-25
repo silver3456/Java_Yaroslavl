@@ -1,3 +1,5 @@
+package Sorting_Algorithms;
+
 public class BubbleSort {
     public static void main(String[] args) {
         int[] arr = {20, 4, 3, 6, 10};

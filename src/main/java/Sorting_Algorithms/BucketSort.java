@@ -1,4 +1,4 @@
-//commonly used algorithm
+package Sorting_Algorithms;//commonly used algorithm
 import java.util.Arrays;
 
 public class BucketSort {

@@ -1,4 +1,4 @@
-//commonly used algorithm
+package Sorting_Algorithms;//commonly used algorithm
 
 public class QuickSort {
     private int array[];

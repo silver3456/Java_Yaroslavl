@@ -1,3 +1,5 @@
+package Assignment_6;
+
 import java.io.IOException;
 import java.util.Scanner;
 
