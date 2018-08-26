@@ -38,7 +38,7 @@ public class MaxMinArray {
         System.out.println("Maximum value is: " + max);
     }
 
-    public static void findMin(Integer[] arr) throws NullPointerException, IllegalArgumentException {
+    public static int findMin(Integer[] arr) throws NullPointerException, IllegalArgumentException {
         if (arr == null)
             throw new NullPointerException("arr is null");
 
@@ -51,6 +51,7 @@ public class MaxMinArray {
         int min = arr[arr.length - 1];
         System.out.println("Minimum value is: " + min);
 
+        return min;
     }
 
     public static int randomize(int min, int max) {

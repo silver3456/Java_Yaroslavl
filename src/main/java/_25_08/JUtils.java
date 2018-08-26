@@ -34,7 +34,8 @@ public class JUtils {
     public static double findSin(double x) {
         double res = 0;
         int var = 1;
-        for (int i = 1; i <= 7; i += 2) {
+        for (int i = 1, c = 1; c <= 50; i += 2, c++) {
+
             double power = Math.pow(x, (double) i);
             double div = findFactorial(i);
             double result = power / div;
