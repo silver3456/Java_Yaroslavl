@@ -31,4 +31,19 @@ public class JUtils {
         return factorial;
     }
 
+    public static double findSin(double x) {
+        double res = 0;
+        int var = 1;
+        for (int i = 1; i <= 7; i += 2) {
+            double power = Math.pow(x, (double) i);
+            double div = findFactorial(i);
+            double result = power / div;
+            res = res + result * var;
+            var = var * (-1);
+
+        }
+        return res;
+
+    }
+
 }
