@@ -14,9 +14,21 @@ public class JUtils {
         return (int) (Math.random() * (max - min + 1) + min);
     }
 
-    public static void printArray(int[]arr){
+    public static void printArray(int[] arr) {
         for (int i : arr)
             System.out.print(i + " ");
         System.out.println();
     }
+
+    public static int findFactorial(int a) {
+
+        int factorial = 1;
+
+        for (int i = 1; i <= a; i++)
+            factorial = i * factorial;
+
+
+        return factorial;
+    }
+
 }
