@@ -10,4 +10,9 @@ public class FactorTest {
         Assert.assertTrue("result = " + result, result == 6);
 
     }
+    @Test
+    public void testSin(){
+        double result = JUtils.findSin(90);
+        Assert.assertTrue("result = " + result, result ==1);
+    }
 }
