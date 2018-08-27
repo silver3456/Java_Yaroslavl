@@ -1,6 +1,5 @@
 package java_materials;
 
-import CodingChallange.Training;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,7 +12,7 @@ public class SortSongs {
 
     public static void main(String[] args) {
 
-        new Training().go();
+        new SortSongs().go();
     }
 
     public void go() {
@@ -26,7 +25,6 @@ public class SortSongs {
     void getSongs() {
         try {
             File file = new File("/Users/alexander/Desktop/SongsList.txt");
-            //  File a = new File("/usr/local/bin/geeks");
             BufferedReader reader = new BufferedReader(new FileReader(file));
             String line = null;
             while ((line = reader.readLine()) != null) {
