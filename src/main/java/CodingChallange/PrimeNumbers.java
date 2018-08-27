@@ -1,5 +1,7 @@
 package CodingChallange;
 
+//Prime number is a number which is only divisible by 1 and itself
+
 public class PrimeNumbers {
     public static boolean isPrime(int number) {
         if (number <= 1) {
