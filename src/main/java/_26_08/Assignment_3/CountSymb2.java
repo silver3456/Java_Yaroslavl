@@ -3,14 +3,12 @@ package _26_08.Assignment_3;
 import java.util.Scanner;
 
 public class CountSymb2 {
-
-    public static String str;
-
+    
     public static void main(String[] args) {
 
         Scanner s = new Scanner(System.in);
         System.out.print("Enter some String:");
-        str = s.nextLine();
+        String str = s.nextLine();
 
         int result = countSymbols(str,'h');
         System.out.println(result);
