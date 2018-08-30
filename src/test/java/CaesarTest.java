@@ -4,13 +4,13 @@ import org.junit.Test;
 
 public class CaesarTest {
     @Test
-    public void testEncode() { //method encryption
+    public void testEncode() { //test method encryption
         String result = CaesarCipherSimple.encode("hello", 3);
         Assert.assertEquals(result, "khoor");
     }
 
     @Test
-    public void testDecode() {//method decryption
+    public void testDecode() {//test method decryption
         String result = CaesarCipherSimple.decode("khoor", 3);
         Assert.assertEquals(result, "hello");
     }
