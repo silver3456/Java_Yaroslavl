@@ -14,15 +14,13 @@ public class CountSymb2 {
         System.out.println(result);
     }
 
-    public static int countSymbols(String init, char symbol) {
-
-        char a[] = init.toCharArray();
+    public static int countSymbols(String str, char symbol) {
         int count = 0;
 
-        for (int i : a) {
-            if (i == symbol) {
+        for(int index = 0; index < str.length(); index++){
+            char ch = str.charAt(index);
+            if(ch == symbol)
                 count++;
-            }
         }
         return count;
     }

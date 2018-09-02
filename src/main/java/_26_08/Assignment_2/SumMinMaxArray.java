@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class SumMinMaxArray {
     public static void main(String[] args) {
         int[] arr = {8, 2, 1, 5, 55, 7, 11};
+        //{1, 2, 7, 8, 11, 55}
 
         bubbleSort(arr);
 
