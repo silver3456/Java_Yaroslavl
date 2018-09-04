@@ -8,6 +8,9 @@ public class CaserCipherV3 {
 
         String encoded = encode("help", 3);
         System.out.println(encoded);
+
+        String decoded = decode("khos", 3);
+        System.out.println(decoded);
     }
 
     public static String encode(String enc, int key) {
@@ -22,6 +25,10 @@ public class CaserCipherV3 {
 
         }
         return stringBuilder.toString();
+    }
+
+    public static String decode(String enc, int offset) {
+        return encode(enc, 0 - offset);
     }
 }
 
