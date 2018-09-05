@@ -6,22 +6,21 @@ public class CaserCipherV3 {
 
     public static void main(String[] args) {
 
-        String encoded = encode("help", 3);
+        String encoded = encode("help", -3);
         System.out.println(encoded);
 
-        String decoded = decode("khos", 3);
+        String decoded = decode("ebim", -3);
         System.out.println(decoded);
     }
 
     public static String encode(String enc, int key) {
 
         StringBuilder stringBuilder = new StringBuilder();
-        char shifted;
         for (char i : enc.toCharArray()) {
             int askii = (int) i + key;
-            shifted = (char) askii;
+            char shifted = (char) askii;
             String var = String.valueOf(shifted);
-            StringBuilder encoded = stringBuilder.append(var);
+            stringBuilder.append(var);
 
         }
         return stringBuilder.toString();
