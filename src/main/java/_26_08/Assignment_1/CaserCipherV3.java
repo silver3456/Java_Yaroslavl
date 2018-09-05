@@ -16,7 +16,7 @@ public class CaserCipherV3 {
     public static String encode(String enc, int key) {
 
         StringBuilder stringBuilder = new StringBuilder();
-        char shifted = 0;
+        char shifted;
         for (char i : enc.toCharArray()) {
             int askii = (int) i + key;
             shifted = (char) askii;
