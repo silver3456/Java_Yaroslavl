@@ -16,8 +16,13 @@ public class CaserCipherV3 {
     public static String encode(String enc, int key) {
 
         StringBuilder stringBuilder = new StringBuilder();
-        for (char i : enc.toCharArray()) {
-            int askii = (int) i + key;
+        for (char ch : enc.toCharArray()) {
+            int code = (int)ch;
+            int askii = code + key;
+
+            if(code >= 255 - key)
+                askii = askii - 255;
+
             char shifted = (char) askii;
             String var = String.valueOf(shifted);
             stringBuilder.append(var);

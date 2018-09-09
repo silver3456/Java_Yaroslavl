@@ -2,48 +2,34 @@ package _26_08.Assignment_2;
 
 //resolved by myself
 
+import _25_08.JUtils;
+
 public class SumInArray {
     public static void main(String[] args) {
 
         int[] arr = {1, 3, 7, 45, 50, 5, 30};
 
-        int indexMin = findMin(arr);
+        int sum = findSumBetween(arr);
+        System.out.println("Sum between min and max values of array = " + sum);
+    }
+    public static int findSumBetween(int[] arr){
+        int indexMin = JUtils.findMinIndex(arr);
 
-        int indexMax = findMax(arr);
+        int indexMax = JUtils.findMaxIndex(arr);
 
         int sum = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > arr[indexMin] && arr[i] < arr[indexMax]) {
-                if (i > indexMin && i < indexMax)
-                    sum = sum + arr[i];
-            }
-        }
-        System.out.print("Sum between min and max values of array = " + sum);
-    }
 
-    private static int findMax(int[] array) {
-        int max = array[0];
-        int indexMax = 0;
-        for (int i = 1; i < array.length; i++) {
-            if (max < array[i]) {
-                max = array[i];
-                indexMax = i;
-            }
-        }
-        return indexMax;
-    }
+        int first = indexMax <= indexMin ? indexMax : indexMin;
+        int last = indexMax >= indexMin ? indexMax : indexMin;
 
-    private static int findMin(int[] array) {
+        first = first == arr.length - 1 ? first : first + 1;
+        last = last == 0 ? last : last - 1;
 
-        int min = array[0];
-        int indexMin = 0;
-        for (int i = 1; i < array.length; i++) {
-            if (min > array[i]) {
-                min = array[i];
-                indexMin = i;
-            }
+        for (int i = first; i <= last; i++) {
+            sum = sum + arr[i];
         }
-        return indexMin;
+
+        return sum;
     }
 }
 

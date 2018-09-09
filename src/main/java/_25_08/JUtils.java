@@ -10,6 +10,31 @@ public class JUtils {
         }
     }
 
+    public static int findMaxIndex(int[] array) {
+        int max = array[0];
+        int indexMax = 0;
+        for (int i = 1; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i];
+                indexMax = i;
+            }
+        }
+        return indexMax;
+    }
+
+    public static int findMinIndex(int[] array) {
+
+        int min = array[0];
+        int indexMin = 0;
+        for (int i = 1; i < array.length; i++) {
+            if (min > array[i]) {
+                min = array[i];
+                indexMin = i;
+            }
+        }
+        return indexMin;
+    }
+
     public static int randomize(int min, int max) {
         return (int) (Math.random() * (max - min + 1) + min);
     }
