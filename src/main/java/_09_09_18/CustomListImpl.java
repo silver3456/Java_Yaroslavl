@@ -12,7 +12,9 @@ public class CustomListImpl implements CustomList {
     }
 
     @Override
-    public int get(int index) {
+    public int get(int index) throws ArrayIndexOutOfBoundsException {
+        if (index > size - 1) throw new ArrayIndexOutOfBoundsException("Array size is " + size +
+                " and index is " + index);
         return arr[index];
 
     }

@@ -9,6 +9,7 @@ public class CustomLIstTest {
     public void testList() {
         CustomList list = new CustomListImpl();
         list.add(1);
+        list.get(2);
         System.out.println(list.get(0));
         Assert.assertEquals(1, list.size());
 
