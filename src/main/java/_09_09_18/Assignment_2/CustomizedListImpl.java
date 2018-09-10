@@ -15,7 +15,9 @@ public class CustomizedListImpl implements CustomList {
     }
 
     @Override
-    public Object get(int index) {
+    public Object get(int index) throws IndexOutOfBoundsException {
+        if (index > size) throw new ArrayIndexOutOfBoundsException("Array size is " + size +
+                " and index is " + index);
         return arr[index];
 
     }
