@@ -1,11 +1,11 @@
 package _09_09_18.Assignment_1;
 
-public interface CustomList {
-    int get(int index);
+public interface CustomList<E> {
+    E get(int index);
 
-    void set(int index, int number);
+    void set(int index, E number);
 
-    void add(int number);
+    void add(E number);
 
     int size();
 
