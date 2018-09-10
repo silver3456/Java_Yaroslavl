@@ -1,4 +1,6 @@
-package _09_09_18;
+package _09_09_18.Assignment_1;
+
+import _09_09_18.Assignment_1.CustomList;
 
 public class CustomListImpl implements CustomList {
 

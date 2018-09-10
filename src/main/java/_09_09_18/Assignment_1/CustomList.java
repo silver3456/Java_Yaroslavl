@@ -1,4 +1,4 @@
-package _09_09_18;
+package _09_09_18.Assignment_1;
 
 public interface CustomList {
     int get(int index);

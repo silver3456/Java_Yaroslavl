@@ -1,5 +1,5 @@
-import _09_09_18.CustomList;
-import _09_09_18.CustomListImpl;
+import _09_09_18.Assignment_1.CustomList;
+import _09_09_18.Assignment_1.CustomListImpl;
 import org.junit.Assert;
 import org.junit.Test;
 
