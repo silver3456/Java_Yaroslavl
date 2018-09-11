@@ -14,7 +14,8 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public void setAge(int age) {
+    public void setAge(int age) throws IllegalArgumentException {
+        if (age == 0) throw new IllegalArgumentException("Age must be more than 0");
         this.age = age;
     }
 
