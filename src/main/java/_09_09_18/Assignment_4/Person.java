@@ -48,16 +48,20 @@ public class Person {
         person.add(personFour);
         person.add(personFive);
 
+        int personAge = findPerson(person);
 
-        int min = person.get(0).withAge();
+        System.out.print(firstName + " " + lastName + " age " + personAge);
+    }
 
-        for (int i = 1; i < person.size(); i++) {
-            if (min > person.get(i).withAge()) {
-                min = person.get(i).withAge();
+    public static int findPerson(List<Person> man) {
+
+        int minAge = man.get(0).withAge();
+
+        for (int i = 1; i < man.size(); i++) {
+            if (minAge > man.get(i).withAge()) {
+                minAge = man.get(i).withAge();
             }
-
         }
-        System.out.print(firstName + " " + lastName + " age " + min);
+        return minAge;
     }
 }
-
