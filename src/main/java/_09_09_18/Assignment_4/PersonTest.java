@@ -1,15 +1,10 @@
-import _09_09_18.Assignment_4.Person;
-import org.junit.Assert;
-import org.junit.Test;
+package _09_09_18.Assignment_4;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class PersonTest {
-
-    @Test
-
-    public void testFindPerson() {
+    public static void main(String[] args) {
         List<Person> person = new ArrayList<>();
         person.add(new Person("Михаил ", "Иванов", 17));
         person.add(new Person("Евгений ", "Тетерев", 25));
@@ -20,7 +15,5 @@ public class PersonTest {
         Person p = Person.findPerson(person);
 
         System.out.print(p.getFirstName() + " " + p.getLastName() + " age " + p.getAge());
-
-        Assert.assertEquals(13, p.getAge());
     }
 }

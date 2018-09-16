@@ -7,64 +7,57 @@ import java.util.List;
 
 public class Person {
 
-    static String firstName;
-    static String lastName;
+    private String firstName;
+    private String lastName;
     private int age;
 
-    public Person(String firstName, String lastName) {
+    public Person(String firstName, String lastName, int age) {
+        setAge(age);
+        setFirstName(firstName);
+        setLastName(lastName);
+    }
+
+
+    public static Person findPerson(List<Person> man) {
+        if (man.isEmpty())
+            return null;
+
+        Person person = man.get(0);
+        int minAge = person.getAge();
+
+        for(int i = 0; i < man.size(); i++){
+            Person another = man.get(i);
+            int anotherAge = another.getAge();
+            if(minAge > anotherAge){
+                minAge = anotherAge;
+                person = another;
+            }
+        }
+
+        return person;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public void setAge(int age) throws IllegalArgumentException {
-        if (age == 0) throw new IllegalArgumentException("Age must be more than 0");
-        this.age = age;
-    }
-
-    public int withAge() {
+    public int getAge() {
         return age;
     }
 
-    public static void main(String[] args) {
-
-
-        Person personOne = new Person("Михаил ", "Иванов");
-        personOne.setAge(17);
-
-        Person personTwo = new Person("Евгений ", "Тетерев");
-        personTwo.setAge(20);
-
-        Person personThree = new Person("Алексей ", "Федоров");
-        personThree.setAge(15);
-
-        Person personFour = new Person("Марина ", "Олексенко");
-        personFour.setAge(13);
-
-        Person personFive = new Person("Виктория", "Кравцова");
-        personFive.setAge(25);
-
-
-        List<Person> person = new ArrayList<>();
-        person.add(personOne);
-        person.add(personTwo);
-        person.add(personThree);
-        person.add(personFour);
-        person.add(personFive);
-
-        int personAge = findPerson(person);
-
-        System.out.print(firstName + " " + lastName + " age " + personAge);
-    }
-
-    public static int findPerson(List<Person> man) {
-
-        int minAge = man.get(0).withAge();
-
-        for (int i = 1; i < man.size(); i++) {
-            if (minAge > man.get(i).withAge()) {
-                minAge = man.get(i).withAge();
-            }
-        }
-        return minAge;
+    public void setAge(int age) {
+        this.age = age;
     }
 }

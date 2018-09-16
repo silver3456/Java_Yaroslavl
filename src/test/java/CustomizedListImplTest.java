@@ -3,14 +3,17 @@ import _09_09_18.Assignment_2.CustomizedListImpl;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 public class CustomizedListImplTest {
 
     @Test
     public void testList() {
 
-        CustomList<String> list = new CustomizedListImpl(10);
+        CustomList<String> list = new CustomizedListImpl<>(10);
         list.add("Alex");
         list.add("Bob");
+
         Assert.assertEquals(2, list.size());
         //System.out.println(list.get(0));
 
