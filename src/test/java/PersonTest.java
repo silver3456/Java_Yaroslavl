@@ -1,4 +1,5 @@
 import _09_09_18.Assignment_4.Person;
+import _09_09_18.Assignment_4.TestObj;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -19,8 +20,24 @@ public class PersonTest {
 
         Person p = Person.findPerson(person);
 
-        System.out.print(p.getFirstName() + " " + p.getLastName() + " age " + p.getAge());
+        System.out.println(p.getFirstName() + " " + p.getLastName() + " age " + p.getAge());
 
         Assert.assertEquals(13, p.getAge());
+    }
+
+    @Test
+    public void t(){
+        TestObj first = new TestObj();
+        first.val = "first";
+
+        first.next = new TestObj();
+        first.next.val = "second";
+
+        first.next.next = new TestObj();
+        first.next.next.val = "third";
+
+        if(first.next.next.next == null){
+            System.out.println("End");
+        }
     }
 }
