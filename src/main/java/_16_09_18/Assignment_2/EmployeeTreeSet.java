@@ -9,8 +9,8 @@ public class EmployeeTreeSet {
     private int salary;
 
     public EmployeeTreeSet(String lastName, int salary) {
-        this.lastName = lastName;
-        this.salary = salary;
+        setSalary(salary);
+        setLastName(lastName);
     }
 
     public String getLastName() {
