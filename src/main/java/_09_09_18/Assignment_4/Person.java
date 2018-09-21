@@ -2,7 +2,6 @@ package _09_09_18.Assignment_4;
 
 //solved by myself
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Person {
@@ -15,26 +14,6 @@ public class Person {
         setAge(age);
         setFirstName(firstName);
         setLastName(lastName);
-    }
-
-
-    public static Person findPerson(List<Person> man) {
-        if (man.isEmpty())
-            return null;
-
-        Person person = man.get(0);
-        int minAge = person.getAge();
-
-        for(int i = 0; i < man.size(); i++){
-            Person another = man.get(i);
-            int anotherAge = another.getAge();
-            if(minAge > anotherAge){
-                minAge = anotherAge;
-                person = another;
-            }
-        }
-
-        return person;
     }
 
     public String getFirstName() {
@@ -60,4 +39,26 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
     }
+
+
+    public static Person findPerson(List<Person> man) {
+        if (man.isEmpty())
+            return null;
+
+        Person person = man.get(0);
+        int minAge = person.getAge();
+
+        for (int i = 0; i < man.size(); i++) {
+            Person another = man.get(i);
+            int anotherAge = another.getAge();
+            if (minAge > anotherAge) {
+                minAge = anotherAge;
+                person = another;
+            }
+        }
+
+        return person;
+    }
 }
+
+
