@@ -1,5 +1,6 @@
 package _16_09_18.Assignment_1;
 
+import java.util.Objects;
 import java.util.Set;
 
 public class Employee {
@@ -28,18 +29,11 @@ public class Employee {
         this.salary = salary;
     }
 
-    @Override
-    public int hashCode() {
-        return getLastName().hashCode();
-    }
-
-    @Override
-    public boolean equals(Object emp) {
-        Employee e = (Employee) emp;//Почему такая запись?
-        return getLastName().equals(e.getLastName());
-    }
 
     public static int removeEmployee(Set<Employee> employees) {
+        if(employees.isEmpty())
+            return Integer.parseInt(null);
+
         employees.removeIf((Employee emp) -> emp.getSalary() == 30000);
         for (Employee employee : employees) {
             System.out.println("List of employees after removing" + "\n" + employee + " ");
@@ -53,5 +47,19 @@ public class Employee {
                 "lastName='" + lastName + '\'' +
                 ", salary=" + salary +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Employee)) return false;
+        Employee employee = (Employee) o;
+        return salary == employee.salary &&
+                Objects.equals(lastName, employee.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(lastName, salary);
     }
 }
