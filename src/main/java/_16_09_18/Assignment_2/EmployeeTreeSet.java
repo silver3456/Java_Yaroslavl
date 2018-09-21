@@ -42,6 +42,13 @@ public class EmployeeTreeSet {
         }
     }
 
+    public static class ComparatorTwo implements Comparator<EmployeeTreeSet> {
+        @Override
+        public int compare(EmployeeTreeSet o1, EmployeeTreeSet o2) {
+            return o1.getLastName().compareTo(o2.getLastName());
+        }
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -17,10 +17,21 @@ public class EmployeeTreeSetTest {
 //        Iterator<EmployeeTreeSet> it = employees.iterator();
 //        while (it.hasNext()) {
 //            System.out.println(it.next().getSalary());
-//
 //        }
 
         for (EmployeeTreeSet emp : employees)
             System.out.println(emp + " ");
+        System.out.println();
+
+        SortedSet<EmployeeTreeSet> emp = new TreeSet<>(new EmployeeTreeSet.ComparatorTwo());
+        emp.add(new EmployeeTreeSet("Zverev", 30000));
+        emp.add(new EmployeeTreeSet("Avdeev", 12000));
+        emp.add(new EmployeeTreeSet("Romanov", 19000));
+        emp.add(new EmployeeTreeSet("Matveev", 45000));
+        emp.add(new EmployeeTreeSet("Sorokin", 39000));
+
+        for (EmployeeTreeSet emp2 : emp)
+            System.out.println(emp2 + " ");
     }
+
 }
