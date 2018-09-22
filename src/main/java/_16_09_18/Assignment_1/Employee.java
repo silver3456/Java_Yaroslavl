@@ -3,10 +3,14 @@ package _16_09_18.Assignment_1;
 import java.util.Objects;
 import java.util.Set;
 
-public class Employee {
+public class Employee{
 
     private String lastName;
-    private int salary;
+    private Integer salary;
+
+    public Employee(){
+
+    }
 
     public Employee(String lastName, int salary) {
         setLastName(lastName);
@@ -21,24 +25,12 @@ public class Employee {
         this.lastName = lastName;
     }
 
-    public int getSalary() {
+    public Integer  getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(Integer  salary) {
         this.salary = salary;
-    }
-
-
-    public static int removeEmployee(Set<Employee> employees) {
-        if(employees.isEmpty())
-            return Integer.parseInt(null);
-
-        employees.removeIf((Employee emp) -> emp.getSalary() == 30000);
-        for (Employee employee : employees) {
-            System.out.println("List of employees after removing" + "\n" + employee + " ");
-        }
-        return employees.size();
     }
 
     @Override
