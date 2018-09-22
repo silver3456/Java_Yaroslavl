@@ -18,10 +18,19 @@ public class MapExamples {
 
         Map<Employee, Set<Employee>> obj = new HashMap<>();
         Set<Employee> employees = new HashSet<>();
+
+        Employee o1 = new Employee("a", 1);
+        Employee o2 = new Employee("a", 1);
+
+        String g = "dfga";
+        System.out.println("" + g.indexOf('a'));
+
         EmployeeUtils.addEmployees(new Employee[]{
                 new Employee(),
                 new Employee()
         }, employees);
+
+
 
         obj.put(new Employee("начальник", 2), employees);
 
