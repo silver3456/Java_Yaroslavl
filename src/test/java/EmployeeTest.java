@@ -29,6 +29,8 @@ public class EmployeeTest {
     public void testTreeSetEmp() {
         System.out.println("Second method");
         Set<Employee> employees = new TreeSet<>(Comparator.comparing(Employee::getSalary));
+
+        //Literal array
         Employee[] employeeArray = new Employee[]{new Employee("Egorov", 10000),
                 new Employee("Prohorov", 15000),
                 new Employee("Saraev", 9000),
@@ -40,12 +42,12 @@ public class EmployeeTest {
                 new Employee("Pukhov", 13000),
                 new Employee("Medvedev", 20000)};
 
-        employees.addAll(Arrays.asList(employeeArray));
+        EmployeeUtils.addEmployees(employeeArray, employees);
 
         EmployeeUtils.printEmployees(employees);
 
         Set<Employee> emp = new TreeSet<>(Comparator.comparing(Employee::getLastName));
-        emp.addAll(employees);
+        EmployeeUtils.addEmployees(employeeArray, emp);
 
         EmployeeUtils.printEmployees(emp);
     }

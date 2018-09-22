@@ -21,4 +21,12 @@ public class EmployeeUtils {
         }
         System.out.println();
     }
+
+   static public void addEmployees(Employee[] employees, Set<Employee> target) {
+        if (employees == null || target == null) throw new NullPointerException("Employees or target is null");
+        for (int i = 0; i < employees.length; i++) {
+            target.add(employees[i]);
+        }
+
+    }
 }
