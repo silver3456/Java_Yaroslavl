@@ -22,11 +22,19 @@ public class EmployeeUtils {
         System.out.println();
     }
 
-   static public void addEmployees(Employee[] employees, Set<Employee> target) {
+    static public void addEmployees(Employee[] employees, Set<Employee> target) {
         if (employees == null || target == null) throw new NullPointerException("Employees or target is null");
         for (int i = 0; i < employees.length; i++) {
             target.add(employees[i]);
         }
+    }
 
+    public static boolean filterEmployeeOne(Set<Employee> emp,String letter) {
+        if (emp.isEmpty())
+            return false;
+
+        emp.removeIf((Employee e) -> e != null && e.getLastName().toLowerCase().contains(letter));
+        return true;
     }
 }
+
