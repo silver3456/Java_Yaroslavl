@@ -74,4 +74,30 @@ public class EmployeeTest {
         Assert.assertEquals(3, employees.size());
         EmployeeUtils.printEmployees(employees);
     }
+
+    @Test
+
+    public void testFilterEmpTwo() {
+        System.out.println("Third method");
+        Set<Employee> employees = new TreeSet<>(Comparator.comparing(Employee::getLastName));
+
+
+        //Literal array
+        Employee[] employeeArray = new Employee[]{new Employee("Egorov", 10000),
+                new Employee("Prohorov", 15000),
+                new Employee("Saraev", 9000),
+                new Employee("Pukhov", 13000),
+                new Employee("Medvedev", 20000),
+                new Employee("Egorov", 10000),};
+
+
+        EmployeeUtils.addEmployees(employeeArray, employees);
+        EmployeeUtils.printEmployees(employees);
+
+        EmployeeUtils.filterEmployeeTwo(employees, "P");
+        Assert.assertEquals(3, employees.size());
+        EmployeeUtils.printEmployees(employees);
+
+    }
+
 }
