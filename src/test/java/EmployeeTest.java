@@ -70,7 +70,7 @@ public class EmployeeTest {
         EmployeeUtils.addEmployees(employeeArray, employees);
         EmployeeUtils.printEmployees(employees);
 
-        EmployeeUtils.filterEmployeeOne(employees, "p");
+        EmployeeUtils.filterEmployeeOne(employees, "P");
         Assert.assertEquals(3, employees.size());
         EmployeeUtils.printEmployees(employees);
     }
@@ -78,7 +78,7 @@ public class EmployeeTest {
     @Test
 
     public void testFilterEmpTwo() {
-        System.out.println("Third method");
+        System.out.println("Fourth method");
         Set<Employee> employees = new TreeSet<>(Comparator.comparing(Employee::getLastName));
 
 

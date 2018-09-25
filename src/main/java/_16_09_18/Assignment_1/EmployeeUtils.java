@@ -40,7 +40,7 @@ public class EmployeeUtils {
         if (emp.isEmpty())
             return false;
 
-        emp.removeIf((Employee e) -> e != null && e.getLastName().toLowerCase().contains(letter));
+        emp.removeIf((Employee e) -> e != null && e.getLastName().contains(letter));
         return true;
     }
 
