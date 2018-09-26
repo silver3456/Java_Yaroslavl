@@ -12,20 +12,27 @@ public class StorageTest {
 
     @Test
 
-    public void testAddFruits() {
+    public void testAddFruits() throws Exception {
 
-        Map<Storage, Set<Fruits>> fruitStore = new HashMap<>();
+        Map<Storage, Set<Fruits>> fruitStoreOne = new HashMap<>();
+        Map<Storage, Set<Fruits>> fruitStoreTwo = new HashMap<>();
 
-        Set<Fruits> fruitsSet = new HashSet<>();
+        Set<Fruits> fruitsSetOne = new HashSet<>();
+        Set<Fruits> fruitsSetTwo = new HashSet<>();
 
-        Fruits[] fruitBasket = new Fruits[]{(new Fruits("Яблоки", 30, 500)),
+        Fruits[] fruitBasketOne = new Fruits[]{(new Fruits("Яблоки", 30, 500)),
                 new Fruits("Апельсины", 50, 700), new Fruits("Ананасы", 70, 300)};
 
-        StorageUtils.addFruits(fruitBasket, fruitsSet);
+        Fruits[] fruitBasketTwo = new Fruits[]{(new Fruits("Яблоки", 40, 500)),
+                new Fruits("Апельсины", 40, 700), new Fruits("Ананасы", 80, 300)};
 
-        fruitStore.put(new Storage("Брагино", new Fruits()), fruitsSet);
+        StorageUtils.addFruits(fruitBasketOne, fruitsSetOne);
+        StorageUtils.addFruits(fruitBasketTwo, fruitsSetTwo);
 
+        fruitStoreOne.put(new Storage("Брагино"), fruitsSetOne);
+        StorageUtils.printFruits("Storage one: ", fruitStoreOne);
+        fruitStoreTwo.put(new Storage("Центр"), fruitsSetTwo);
+        StorageUtils.printFruits("Storage two: ", fruitStoreTwo);
 
-        // StorageUtils.printFruits();
     }
 }
