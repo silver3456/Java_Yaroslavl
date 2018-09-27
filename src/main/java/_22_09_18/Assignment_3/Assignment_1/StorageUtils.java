@@ -16,4 +16,12 @@ public class StorageUtils {
             target.add(fruits[i]);
     }
 
+//    public static Storage priceCompare(Map<Storage, Set<Fruits>> price) {
+//        if(price.isEmpty())
+//            return null;
+//
+//
+//
+//    }
+
 }
