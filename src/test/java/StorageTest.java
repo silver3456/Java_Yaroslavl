@@ -9,11 +9,9 @@ public class StorageTest {
 
     @Test
 
-    public void testAddFruits() {
+    public void testAddFruits() throws Exception {
 
-        Map<Storage, Set<Fruits>> fruitStoreOne = new HashMap<>();
-        Map<Storage, Set<Fruits>> fruitStoreTwo = new HashMap<>();
-
+        Map<String, Storage> fruitStore = new HashMap<>();
         Set<Fruits> fruitsSetOne = new HashSet<>();
         Set<Fruits> fruitsSetTwo = new HashSet<>();
 
@@ -26,18 +24,10 @@ public class StorageTest {
         StorageUtils.addFruits(fruitBasketOne, fruitsSetOne);
         StorageUtils.addFruits(fruitBasketTwo, fruitsSetTwo);
 
-        Storage storageOne = new Storage("Брагино");//Как получить Value если key будет new Storage()?
-        Storage storageTwo = new Storage("Центр");
+        fruitStore.put("Storage one: ", new Storage("Брагино", fruitsSetOne));
+        fruitStore.put("Storage two: ", new Storage("Центр", fruitsSetTwo));
 
-        fruitStoreOne.put(storageOne, fruitsSetOne);
-        fruitStoreTwo.put(storageTwo, fruitsSetTwo);
-
-        System.out.println(fruitStoreOne.get(storageOne));
-        System.out.println(fruitStoreOne.get(storageTwo));
-
-
-//        StorageUtils.printFruits("Storage one: ", fruitStoreOne);
-//        StorageUtils.printFruits("Storage two: ", fruitStoreTwo);
+        StorageUtils.printFruits("Storage one", fruitStore);
     }
 
     @Test
@@ -58,8 +48,8 @@ public class StorageTest {
         StorageUtils.addFruits(fruitBasketOne, fruitsSetOne);
         StorageUtils.addFruits(fruitBasketTwo, fruitsSetTwo);
 
-        Storage storageOne = new Storage("Брагино");//Как получить Value если key будет new Storage()?
-        Storage storageTwo = new Storage("Центр");
+        Storage storageOne = new Storage("Брагино", fruitsSetOne);//Как получить Value если key будет new Storage()?
+        Storage storageTwo = new Storage("Центр", fruitsSetTwo);
 
         fruitStoreOne.put(storageOne, fruitsSetOne);
         fruitStoreTwo.put(storageTwo, fruitsSetTwo);
