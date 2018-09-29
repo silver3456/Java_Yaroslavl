@@ -10,8 +10,8 @@ public class StorageTest {
     @Test
 
     public void testAddFruits() throws Exception {
-
-        Map<String, Storage> fruitStore = new HashMap<>();
+        System.out.println("first method");
+        Map<Storage, Set<Fruits>> fruitStore = new HashMap<>();
         Set<Fruits> fruitsSetOne = new HashSet<>();
         Set<Fruits> fruitsSetTwo = new HashSet<>();
 
@@ -24,23 +24,26 @@ public class StorageTest {
         StorageUtils.addFruits(fruitBasketOne, fruitsSetOne);
         StorageUtils.addFruits(fruitBasketTwo, fruitsSetTwo);
 
-        fruitStore.put("Storage one: ", new Storage("Брагино", fruitsSetOne));
-        fruitStore.put("Storage two: ", new Storage("Центр", fruitsSetTwo));
+
+        fruitStore.put(new Storage("Брагино", fruitsSetOne), fruitsSetOne);
+        fruitStore.put(new Storage("Центр", fruitsSetTwo), fruitsSetTwo);
+
+        System.out.println("Fruits found: " + fruitStore.get(new Storage("Брагино", null)));
 
         StorageUtils.printFruits("Storage one", fruitStore);
+
     }
 
     @Test
 
     public void testPrice() {
-        Map<Storage, Set<Fruits>> fruitStoreOne = new HashMap<>();
-        Map<Storage, Set<Fruits>> fruitStoreTwo = new HashMap<>();
-
+        System.out.println("second method");
+        List<Storage> storages = new ArrayList();
         Set<Fruits> fruitsSetOne = new HashSet<>();
         Set<Fruits> fruitsSetTwo = new HashSet<>();
 
-        Fruits[] fruitBasketOne = new Fruits[]{(new Fruits("Яблоки", 30, 500)),
-                new Fruits("Апельсины", 50, 700), new Fruits("Ананасы", 70, 300)};
+        Fruits[] fruitBasketOne = new Fruits[]{(new Fruits("Яблоки", 10, 500)),
+                new Fruits("Апельсины", 10, 700), new Fruits("Ананасы", 10, 300)};
 
         Fruits[] fruitBasketTwo = new Fruits[]{(new Fruits("Яблоки", 40, 500)),
                 new Fruits("Апельсины", 40, 700), new Fruits("Ананасы", 80, 300)};
@@ -48,28 +51,13 @@ public class StorageTest {
         StorageUtils.addFruits(fruitBasketOne, fruitsSetOne);
         StorageUtils.addFruits(fruitBasketTwo, fruitsSetTwo);
 
-        Storage storageOne = new Storage("Брагино", fruitsSetOne);//Как получить Value если key будет new Storage()?
+        Storage storageOne = new Storage("Брагино", fruitsSetOne);
         Storage storageTwo = new Storage("Центр", fruitsSetTwo);
 
-        fruitStoreOne.put(storageOne, fruitsSetOne);
-        fruitStoreTwo.put(storageTwo, fruitsSetTwo);
+        storages.add(storageOne);
+        storages.add(storageTwo);
 
-        int avgPriceOne = fruitsSetOne.stream().mapToInt(Fruits::getPrice).sum();
-        int avgPriceTwo = fruitsSetTwo.stream().mapToInt(Fruits::getPrice).sum();
-
-        int targetPrice;
-        Storage storageCheapest;
-
-        if (avgPriceOne > avgPriceTwo) {
-            targetPrice = avgPriceTwo;
-            storageCheapest = storageTwo;
-        } else {
-            targetPrice = avgPriceOne;
-            storageCheapest = storageOne;
-        }
-
-        System.out.println("The cheapest storage is " + storageCheapest.toString() +
-                " with total price sum " + targetPrice);
+        System.out.println("Storage with min average price is " + StorageUtils.priceCompare(storages));
 
     }
 }

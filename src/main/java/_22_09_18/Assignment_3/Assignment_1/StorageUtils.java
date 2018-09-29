@@ -16,12 +16,25 @@ public class StorageUtils {
             target.add(fruits[i]);
     }
 
-//    public static Storage priceCompare(Map<Storage, Set<Fruits>> price) {
-//        if(price.isEmpty())
-//            return null;
-//
-//
-//
-//    }
+    public static Storage priceCompare(List<Storage> storages) {
+        if (storages.isEmpty())
+            return null;
+
+        Storage targetStorage = storages.get(0);
+        Double minPrice = targetStorage.getFruits().stream().mapToInt(Fruits::getPrice).average().getAsDouble();
+
+        for (int i = 0; i < storages.size(); i++) {
+            Storage storage = storages.get(i);
+            Double avgPrice = storage.getFruits().stream().mapToInt(Fruits::getPrice).average().getAsDouble();
+
+            if (minPrice > avgPrice) {
+                minPrice = avgPrice;
+                targetStorage = storage;
+            }
+
+        }
+        return targetStorage;
+
+    }
 
 }
