@@ -79,7 +79,7 @@ public class EmployeeTest {
 
     public void testFilterEmpTwo() {
         System.out.println("Fourth method");
-        Set<Employee> employees = new TreeSet<>(Comparator.comparing(Employee::getLastName));
+        Set<Employee> employees = new TreeSet<>(Comparator.comparing(employee -> employee.getLastName()));
 
 
         //Literal array
@@ -94,8 +94,8 @@ public class EmployeeTest {
         EmployeeUtils.addEmployees(employeeArray, employees);
         EmployeeUtils.printEmployees(employees);
 
-        EmployeeUtils.filterEmployeeTwo(employees, "P");
-        Assert.assertEquals(3, employees.size());
+        EmployeeUtils.filterEmployeeTwo(employees, 'P');
+        Assert.assertEquals(5, employees.size());
         EmployeeUtils.printEmployees(employees);
 
     }

@@ -1,14 +1,12 @@
 package _16_09_18.Assignment_1;
 
-import java.util.Comparator;
+
+import org.apache.commons.lang.StringUtils;
+
 import java.util.Iterator;
 import java.util.Set;
-import java.util.TreeSet;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
-import static java.util.stream.Collectors.toList;
 
 public class EmployeeUtils {
     public static boolean removeEmployee(Set<Employee> employees, int salaryValue) {
@@ -44,12 +42,14 @@ public class EmployeeUtils {
         return true;
     }
 
-    public static boolean filterEmployeeTwo(Set<Employee> emp2, String letter2) {
+    public static boolean filterEmployeeTwo(Set<Employee> emp2, char letter2) {
         if (emp2.isEmpty())
             return false;
 
-        Set<Employee> removed = emp2.stream().filter(employee -> employee.getLastName()
-                .contains(letter2)).collect(Collectors.toSet());
+        Set<Employee> removed = emp2.stream().filter(employee -> {
+            int index = employee.getLastName().toLowerCase().indexOf(letter2);
+            return index != -1;
+        }).collect(Collectors.toSet());
         emp2.removeAll(removed);
         return true;
     }
