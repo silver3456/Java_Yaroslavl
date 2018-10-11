@@ -33,6 +33,8 @@ public class ArrayListBenchmark {
 
         startTime = System.nanoTime();
 
+        //remove
+
         for (int i = 99999; i >= 0; i--) {
             arrayList.remove(i);
         }
