@@ -30,6 +30,13 @@ public class MeasureTests {
                 list.add(i);
         };
 
+        addConsumer = new Consumer<Collection>() {
+            @Override
+            public void accept(Collection collection) {
+
+            }
+        };
+
         getConsumer = (list) -> {
             Iterator<Integer> iter = list.iterator();
             while (iter.hasNext())
