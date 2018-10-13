@@ -70,7 +70,6 @@ public class MeasureTests {
     public static void measure(String method, Consumer<Collection> consumer, Collection<Integer> list) {
         long startTime = System.nanoTime();
 
-
         consumer.accept(list);
 
         long endtime = System.nanoTime();

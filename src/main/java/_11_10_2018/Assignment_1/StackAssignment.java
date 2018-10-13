@@ -15,11 +15,14 @@ public class StackAssignment {
         }
 
         System.out.println(stack);
-
-        Comparator comparator = Collections.reverseOrder();
-        Collections.sort(stack, comparator);
-
+//
+//        Comparator comparator = Collections.reverseOrder();
+//        Collections.sort(stack, comparator);
         System.out.println(stack);
+    }
+
+    public static void sortStack(Stack<Integer> stack){
+
 
     }
 }
