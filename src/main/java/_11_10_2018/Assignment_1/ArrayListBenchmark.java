@@ -2,45 +2,44 @@ package _11_10_2018.Assignment_1;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class ArrayListBenchmark {
+    final static int LIMIT = 100000;
+    final static int SEC = 1000;
+
     public static void main(String[] args) {
         List<Integer> arrayList = new ArrayList<>();
-        long startTime = System.nanoTime();
 
         //add
-
-        for (int i = 0; i < 100000; i++) {
-            arrayList.add(i);
-        }
-
-        long endtime = System.nanoTime();
-        long duration = endtime - startTime;
-        System.out.println("ArrayList add: \t" + duration);
-
-
-        startTime = System.nanoTime();
+        measure("ArrayList add", (list) -> {
+            for (int i = 0; i < LIMIT; i++)
+                list.add(i);
+        }, arrayList);
 
         //get
-
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < LIMIT; i++)
             arrayList.get(i);
-        }
 
-        endtime = System.nanoTime();
-        duration = endtime - startTime;
-        System.out.println("ArrayList get: \t" + duration);
-
-        startTime = System.nanoTime();
+        measure("ArrayList get", (list) -> {
+            for (int i = 0; i < LIMIT; i++)
+                list.get(i);
+        }, arrayList);
 
         //remove
+        measure("ArrayList remove", (list) -> {
+            for (int i = LIMIT - 1; i >= 0; i--)
+                list.remove(i);
+        }, arrayList);
+    }
 
-        for (int i = 99999; i >= 0; i--) {
-            arrayList.remove(i);
-        }
-        endtime = System.nanoTime();
-        duration = endtime - startTime;
-        System.out.println("ArrayList remove: \t" + duration);
+    public static void measure(String method, Consumer<List> consumer, List<Integer> list) {
+        long startTime = System.currentTimeMillis();
 
+        consumer.accept(list);
+
+        long endtime = System.currentTimeMillis();
+        long duration = endtime - startTime;
+        System.out.println(method + ": \t" + ((double) duration) / SEC);
     }
 }
