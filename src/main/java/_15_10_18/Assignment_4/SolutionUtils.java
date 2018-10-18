@@ -27,6 +27,23 @@ public class SolutionUtils {
             break;
         }
     }
+
+    public static void coding() {
+        System.out.println("Coder is coding");
+
+    }
+
+    public static void live() {
+        System.out.println("User is alive");
+    }
+
+    public static void doNothing(){
+        System.out.println("Looser is doing nothing");
+    }
+
+    public static void enjoy(){
+        System.out.println("Proger is enjoying");
+    }
 }
 
 
