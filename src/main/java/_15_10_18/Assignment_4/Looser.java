@@ -28,18 +28,4 @@ public class Looser {
     public void setAge(int age) {
         this.age = age;
     }
-
-    public void doNothing(){
-        System.out.println("Looser is doing nothing");
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
 }

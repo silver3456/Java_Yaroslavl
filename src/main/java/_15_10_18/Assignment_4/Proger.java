@@ -28,8 +28,4 @@ public class Proger {
     public void setAge(int age) {
         this.age = age;
     }
-
-    public void enjoy(){
-        System.out.println("Proger is enjoying");
-    }
 }

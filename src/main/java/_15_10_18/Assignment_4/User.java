@@ -28,18 +28,4 @@ public class User {
     public void setAge(int age) {
         this.age = age;
     }
-
-    public void live(){
-        System.out.println("User is alive");
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
 }
