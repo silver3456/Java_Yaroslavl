@@ -32,4 +32,14 @@ public class Looser {
     public void doNothing(){
         System.out.println("Looser is doing nothing");
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
 }
