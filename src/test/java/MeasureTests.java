@@ -6,7 +6,6 @@ import java.util.function.Consumer;
 
 public class MeasureTests {
     final static int LIMIT = 100000;
-    final static int SEC = 1000;
 
     private List<Integer> arrayList;
     private Set<Integer> integerHashSet;
