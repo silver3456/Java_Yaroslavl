@@ -2,6 +2,7 @@ package _13_10_18;
 
 public  class B extends A implements T{
     public B(){
+
         super("dfg");
     }
 

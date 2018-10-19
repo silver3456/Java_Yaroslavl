@@ -6,6 +6,7 @@ import java.util.function.Function;
 public class C {
 
     public void sayHi(T t){
+
         t.doSomething();
     }
     public void t(Function<Integer, String> function){
