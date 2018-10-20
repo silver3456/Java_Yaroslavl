@@ -1,6 +1,5 @@
 package CodingChallange;
 
-
 public class ReverseStringBuffer {
     public static void main(String[] args) {
 
@@ -11,7 +10,6 @@ public class ReverseStringBuffer {
         stringBuffer.reverse();
         int reverse = Integer.parseInt(stringBuffer.toString());
         System.out.println(original + " : " + reverse);
-
 
     }
 }
