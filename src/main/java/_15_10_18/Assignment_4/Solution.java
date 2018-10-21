@@ -15,18 +15,21 @@ public class Solution {
 
         final String[] words = {"user", "looser", "coder", "proger"};
 
-        LOOP:
+
         while (true) {
             System.out.println("Enter key");
             String str = reader.readLine();
 
+            boolean flag = false;
             for (String var : words) {
                 if (str.equals(var)) {
                     keys.add(str);
-                    continue LOOP;
+                    flag = true;
+                    break;
                 }
             }
-            break;
+            if(!flag)
+                break;
         }
 
         if (keys.isEmpty())

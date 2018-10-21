@@ -28,4 +28,8 @@ public class Coder implements Person {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public void coding() {
+        System.out.println("Coder is coding");
+    }
 }

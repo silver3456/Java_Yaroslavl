@@ -28,4 +28,8 @@ public class Looser implements Person {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public void doNothing() {
+        System.out.println("Looser is doing nothing");
+    }
 }

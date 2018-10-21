@@ -28,4 +28,8 @@ public class User implements Person {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public void live() {
+        System.out.println("User is alive");
+    }
 }
