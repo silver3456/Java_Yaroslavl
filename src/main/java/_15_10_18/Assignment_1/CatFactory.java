@@ -1,18 +1,15 @@
 package _15_10_18.Assignment_1;
 
 public class CatFactory {
-    public static Cats getCatByKey(String key) {
+    public static Cat getCatByKey(String key) {
 
-        Cats cat = null;
+        Cat cat = null;
 
-        if (key.length() > 7) {
-            cat = new MaleCat("Male cat is created: " + key);
-        } else if (key.length() >= 4 && key.length() <= 6) {
-            cat = new FemaleCat("Female cat is created: " + key);
-        } else {
-            cat = new Cats("Cat with ? sex is created: " + key);
+        if (key.length() > 5) {
+            cat = new MaleCat();
+        } else  {
+            cat = new FemaleCat();
         }
-
         return cat;
     }
 }

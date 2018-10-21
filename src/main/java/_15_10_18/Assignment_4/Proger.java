@@ -1,6 +1,6 @@
 package _15_10_18.Assignment_4;
 
-public class Proger {
+public class Proger implements Person {
 
     private String name;
     private int age;

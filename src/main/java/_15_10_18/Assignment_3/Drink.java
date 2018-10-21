@@ -1,7 +1,11 @@
 package _15_10_18.Assignment_3;
 
-public interface Drink {
+public abstract class Drink {
 
-   void taste();
+   public void taste(){
+      System.out.println("Вкусно");
+   }
+
+   abstract String getHolidayName();
 
 }

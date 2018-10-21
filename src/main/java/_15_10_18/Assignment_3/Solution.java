@@ -14,17 +14,10 @@ public class Solution {
 
     private static void getWine() {
         System.out.println(new BubblyWine().getHolidayName());
-
     }
 
     private static void getBubblyWine() {
-        Wine wine = new Wine() {
-            @Override
-            public String getHolidayName() {
-                return super.getHolidayName();
-            }
-        };
-        System.out.println(wine.getHolidayName());
+        System.out.println(new Wine().getHolidayName());
     }
 }
 

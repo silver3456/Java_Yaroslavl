@@ -52,4 +52,9 @@ public class Building {
     public static Building getBuilding() {
         return new Building();
     }
+
+    public static Building getBuilding(String name, Integer floors) {
+        return new Building(name, null, floors);
+    }
+
 }

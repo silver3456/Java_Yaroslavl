@@ -7,8 +7,4 @@ public class BubblyWine extends Wine{
         return "Новый год";
     }
 
-    @Override
-    public void taste() {
-        super.taste();
-    }
 }

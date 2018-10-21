@@ -1,46 +1,36 @@
 package _15_10_18.Assignment_2;
 
 public class School extends Building {
+    //singleton
+    private final static School singletonSchool = new School();
 
-    private String name;
-    private int numFloors;
-
-    public School() {
-
+    private School() {
+        super();
     }
 
-    public School(String name, int numFloors) {
-        setName(name);
-        setNumFloors(numFloors);
+    private School(String name, String buildingType, int floors) {
+        super(name, buildingType, floors);
     }
 
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getNumFloors() {
-        return numFloors;
-    }
-
-    public void setNumFloors(int numFloors) {
-        this.numFloors = numFloors;
-    }
 
     @Override
     public String toString() {
         return "School{" +
-                "name='" + name + '\'' +
-                ", numFloors=" + numFloors +
+                "name='" + getName() + '\'' +
+                ", numFloors=" + getFloors() +
                 '}';
     }
 
+    public static School getSingletonSchool(){
+        return singletonSchool;
+    }
+
+
     public static School getSchool() {
         return new School();
+    }
+
+    public static School getSchool(String name, Integer floors) {
+        return new School(name, null, floors);
     }
 }
