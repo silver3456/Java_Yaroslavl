@@ -1,3 +1,5 @@
+package TestSuite;
+
 import _09_09_18.Assignment_1.CustomList;
 import _09_09_18.Assignment_2.CustomizedListImpl;
 import org.junit.Assert;

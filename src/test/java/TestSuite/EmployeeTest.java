@@ -1,3 +1,5 @@
+package TestSuite;
+
 import _16_09_18.Assignment_1.Employee;
 import _16_09_18.Assignment_1.EmployeeUtils;
 import _16_09_18.Assignment_2.EmployeeTreeSet;

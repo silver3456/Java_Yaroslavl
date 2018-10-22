@@ -1,3 +1,5 @@
+package TestSuite;
+
 import _26_08.Assignment_1.CaesarCipher;
 import _26_08.Assignment_1.CaesarCipherSimple;
 import org.junit.Assert;

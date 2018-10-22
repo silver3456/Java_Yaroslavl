@@ -1,3 +1,5 @@
+package TestSuite;
+
 import _16_09_18.City;
 import org.junit.Test;
 

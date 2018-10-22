@@ -1,3 +1,5 @@
+package TestSuite;
+
 import _22_09_18.Assignment_3.Assignment_1.Fruits;
 import _22_09_18.Assignment_3.Assignment_1.Storage;
 import _22_09_18.Assignment_3.Assignment_1.StorageUtils;

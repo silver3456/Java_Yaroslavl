@@ -1,3 +1,5 @@
+package TestSuite;
+
 import Assignment_1.MaxMinArray;
 import _25_08.JUtils;
 import org.junit.Assert;

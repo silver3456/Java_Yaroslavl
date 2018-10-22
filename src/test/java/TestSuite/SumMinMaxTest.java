@@ -1,3 +1,5 @@
+package TestSuite;
+
 import _26_08.Assignment_2.SumInArray;
 import _26_08.Assignment_2.SumMinMaxArray;
 import org.junit.Assert;

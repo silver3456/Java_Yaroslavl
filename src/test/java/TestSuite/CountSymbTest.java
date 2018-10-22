@@ -1,3 +1,5 @@
+package TestSuite;
+
 import _26_08.Assignment_3.CountSymb2;
 import org.junit.Assert;
 import org.junit.Test;

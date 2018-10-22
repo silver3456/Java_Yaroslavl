@@ -1,3 +1,5 @@
+package TestSuite;
+
 import _09_09_18.Assignment_4.Person;
 import _09_09_18.Assignment_4.TestObj;
 import org.junit.Assert;
