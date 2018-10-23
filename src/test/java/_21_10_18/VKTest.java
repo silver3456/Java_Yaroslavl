@@ -6,15 +6,24 @@ import _26_08.Assignment_1.CaeserCipherV3;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 
-public class VKTest {
+public class VKTest extends TestBase {
+
+    private static WebDriver driver;
+    private LoginPage lp;
+
+
+    @BeforeTest
+    public void init() {
+        driver = ApplicationManager.driver;
+        lp = new LoginPage(driver);
+    }
 
     @Test
     public void testLogin() {
-        WebDriver driver = ApplicationManager.driver;
-        LoginPage lp = new LoginPage(driver);
         lp.login(CaeserCipherV3.decode("pfisbo+_bpq=j^fi+or", -3),
                 CaeserCipherV3.decode("Pfisbo=.5./", -3));
         String title_actual = driver.getTitle();
@@ -23,8 +32,13 @@ public class VKTest {
 
     @Test
     public void testUnreadMessages() {
-        boolean verifymMessage = ApplicationManager.driver.findElement(By.xpath("//*[@id=\"l_msg\"]/a/span/span[1]/span")).getText().isEmpty();
+        boolean verifymMessage = driver.findElement(By.xpath("//*[@id=\"l_msg\"]/a/span/span[1]/span")).getText().isEmpty();
         org.testng.Assert.assertFalse(verifymMessage);
+    }
+
+    @Test
+    public void verifyNumOfFriends() {
+
     }
 }
 
