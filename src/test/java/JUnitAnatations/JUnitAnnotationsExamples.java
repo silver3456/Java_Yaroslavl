@@ -1,4 +1,4 @@
-package _21_10_18;
+package JUnitAnatations;
 
 import org.junit.*;
 

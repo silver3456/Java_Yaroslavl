@@ -6,7 +6,7 @@ public class CaeserCipherV3 {
 
     public static void main(String[] args) {
 
-        String encoded = encode("help", -3);
+        String encoded = encode("Silver@1812", -3);
         System.out.println(encoded);
 
         String decoded = decode("ebim", -3);
