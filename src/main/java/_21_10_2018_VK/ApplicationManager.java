@@ -23,8 +23,8 @@ public class ApplicationManager {
         }
     }
 
-    public void stop() {
-        driver.quit();
-    }
+//    public void stop() {
+//        driver.quit();
+//    }
 
 }

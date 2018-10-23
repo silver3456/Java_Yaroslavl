@@ -19,13 +19,12 @@ public class VKTest {
                 CaeserCipherV3.decode("Pfisbo=.5./", -3));
         String title_actual = driver.getTitle();
         Assert.assertEquals("Welcome! | VK", title_actual);
-        System.out.println(title_actual);
     }
 
     @Test
     public void testUnreadMessages() {
-        String message = ApplicationManager.driver.findElement(By.xpath("//*[@id=\"l_msg\"]/a/span/span[1]/span")).getText();
-        System.out.println(message);
+        boolean verifymMessage = ApplicationManager.driver.findElement(By.xpath("//*[@id=\"l_msg\"]/a/span/span[1]/span")).getText().isEmpty();
+        org.testng.Assert.assertFalse(verifymMessage);
     }
 }
 
