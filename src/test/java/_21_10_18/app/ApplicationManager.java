@@ -1,4 +1,4 @@
-package _21_10_2018_VK;
+package _21_10_18.app;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

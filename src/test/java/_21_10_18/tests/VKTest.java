@@ -1,7 +1,7 @@
-package _21_10_18;
+package _21_10_18.tests;
 
-import _21_10_2018_VK.ApplicationManager;
-import _21_10_2018_VK.LoginPage;
+import _21_10_18.app.ApplicationManager;
+import _21_10_18.pages.LoginPage;
 import _26_08.Assignment_1.CaeserCipherV3;
 import org.junit.Assert;
 import org.openqa.selenium.By;
