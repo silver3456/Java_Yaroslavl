@@ -2,6 +2,8 @@ package _21_10_2018_VK;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 import java.util.concurrent.TimeUnit;
 
 public class LoginPage {
@@ -25,7 +27,7 @@ public class LoginPage {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
        // driver.manage().window().maximize();
         driver.get(BASE_URL);
-        driver.findElement(By.id("index_email")).sendKeys(email);
+        driver.findElement(By.cssSelector("#index_email")).sendKeys(email);
         driver.findElement(By.id("index_pass")).sendKeys(password);
         driver.findElement(By.id("index_login_button")).click();
     }
