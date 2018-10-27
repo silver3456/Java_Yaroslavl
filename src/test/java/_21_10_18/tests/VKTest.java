@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -28,7 +29,7 @@ public class VKTest extends TestBase {
 
 
     //Verify ability to login(valid user name & password)
-    @Test
+    @Test(groups = {"Positive1"})
     public void testLoginOne() {
         lp.login(CaeserCipherV3.decode("pfisbo+_bpq=j^fi+or", -3),
                 CaeserCipherV3.decode("Pfisbo=.5./", -3));
@@ -38,7 +39,7 @@ public class VKTest extends TestBase {
     }
 
     //Verify error message is displayed (invalid user name or password)
-    @Test
+    @BeforeGroups(groups = {"Positive1"})
     public void testLoginTwo() {
         lp.login(CaeserCipherV3.decode("pfisbo+_bpq=j^fi", -3),
                 CaeserCipherV3.decode("Pfisbo=.5./", -3));
@@ -47,7 +48,7 @@ public class VKTest extends TestBase {
     }
 
     //Verify phone number field is displayed (invalid user name or password)
-    @Test
+    @BeforeGroups(groups = {"Positive1", "Positive2", "Positive3"})
     public void testLoginThree() {
         lp.login(CaeserCipherV3.decode("pfisbo+_bpq=j^fi", -3),
                 CaeserCipherV3.decode("Pfisbo=.5./", -3));
@@ -57,20 +58,29 @@ public class VKTest extends TestBase {
 
 
     // Verify if user has unread messages
-    @Test
+    @Test(groups = {"Positive1","Positive2"})
     public void testUnreadMessages() {
         boolean verifymMessage = driver.findElement(By.xpath("//*[@id=\"l_msg\"]/a/span/span[1]/span")).getText().isEmpty();
         org.testng.Assert.assertFalse(verifymMessage);
     }
 
     // Verify number of friends
-    @Test
+    @Test(groups = {"Positive1", "Positive2", "Positive3"})
     public void verifyNumOfFriends() {
         WebElement friends = driver.findElement(By.cssSelector(" #l_fr > a > span > span.left_label.inl_bl"));
         friends.click();
         WebElement friendsNum = driver.findElement(By.cssSelector("#friends_tab_all > a > span"));
         int sizeFriends = Integer.parseInt(friendsNum.getText());
         Assert.assertEquals(257, sizeFriends);
+    }
+
+    //Test logout option
+    @Test(enabled = false)
+    //@Test(groups = {"Positive1", "Positive2", "Positive3", "Positive4"})
+    public void testLogOut() {
+        lp.login(CaeserCipherV3.decode("pfisbo+_bpq=j^fi+or", -3),
+                CaeserCipherV3.decode("Pfisbo=.5./", -3));
+        lp.logout();
     }
 }
 

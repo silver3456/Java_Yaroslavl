@@ -28,6 +28,7 @@ public class LoginPage {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         // driver.manage().window().maximize();
         driver.get(BASE_URL);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.cssSelector("#index_email")).sendKeys(email);
         driver.findElement(By.id("index_pass")).sendKeys(password);
         driver.findElement(By.id("index_login_button")).click();

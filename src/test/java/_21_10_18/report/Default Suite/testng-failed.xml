@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default Suite]">
+  <test thread-count="5" name="Java_Yaroslavl(failed)">
+    <classes>
+      <class name="_21_10_18.tests.VKTest">
+        <methods>
+          <include name="testLoginOne"/>
+          <include name="testUnreadMessages"/>
+          <include name="verifyNumOfFriends"/>
+          <include name="setUp"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- _21_10_18.tests.VKTest -->
+    </classes>
+  </test> <!-- Java_Yaroslavl(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->
