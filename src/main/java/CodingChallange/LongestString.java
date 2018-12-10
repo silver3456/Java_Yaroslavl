@@ -25,15 +25,24 @@ public class LongestString {
         String text = "";
         String longestString = "";
 
-        while (true) {
+//        while (true) {
+//            text = input.nextLine();
+//            if (!text.equals("stop")) {
+//                list.add(text);
+//            } else {
+//                input.close();
+//                break;
+//            }
+//        }
+
+        while (!text.equals("stop")) {
             text = input.nextLine();
             if (!text.equals("stop")) {
                 list.add(text);
-            } else {
-                input.close();
-                break;
             }
         }
+        input.close();
+
 
         int max = 0;
 
