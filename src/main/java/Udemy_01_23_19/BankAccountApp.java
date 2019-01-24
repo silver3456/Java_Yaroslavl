@@ -1,12 +1,10 @@
-package _01_23_19;
-
-import Udemy_01_23_19.IInterest;
+package Udemy_01_23_19;
 
 public class BankAccountApp {
     public static void main(String[] args) {
-        Udemy_01_23_19.BankAccount acc1 = new Udemy_01_23_19.BankAccount("232343345", 1000.50);
-        Udemy_01_23_19.BankAccount acc2 = new Udemy_01_23_19.BankAccount("652343345", 2000);
-        Udemy_01_23_19.BankAccount acc3 = new Udemy_01_23_19.BankAccount("962343345", 3000);
+        BankAccount acc1 = new BankAccount("232343345", 1000.50);
+        BankAccount acc2 = new BankAccount("652343345", 2000);
+        BankAccount acc3 = new BankAccount("962343345", 3000);
 
         acc1.setName("Jim");
         System.out.println(acc1.getName());
@@ -78,7 +76,7 @@ class BankAccount implements IInterest {
     //Add interest
     @Override
     public void accrue() {
-        balance = balance * (1 + rate / 100);
+        balance = balance * (1 + Udemy_01_23_19.IInterest.rate / 100);
         showBalance();
     }
 

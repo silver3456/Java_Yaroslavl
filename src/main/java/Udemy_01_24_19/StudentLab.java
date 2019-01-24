@@ -1,6 +1,4 @@
-package _01_24_19;
-
-import Udemy_01_24_19.IFinance;
+package Udemy_01_24_19;
 
 public class StudentLab {
     public static void main(String[] args) {
