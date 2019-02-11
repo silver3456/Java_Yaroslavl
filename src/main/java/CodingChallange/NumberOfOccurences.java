@@ -10,7 +10,7 @@ public class NumberOfOccurences {
 
         String word = Integer.toString(inputNum);
         String[] arrayNums = word.split("");
-        
+
 
 
         String numCompare = Integer.toString(numToSearch);
