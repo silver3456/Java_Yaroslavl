@@ -14,15 +14,15 @@ public class SortArrayComparator {
 
         //Sort ascending
 
-//        Arrays.sort(arr, Integer::compareTo);
-//        for (int j : arr)
-//            System.out.print(j + " ");
+        Arrays.sort(arr, (o1, o2) -> o1.compareTo(o2));
+        for (int j : arr)
+            System.out.print(j + " ");
 
 
         //Sort descending
-        Arrays.sort(arr, (o1, o2) -> -o1.compareTo(o2));
-        for (int j : arr)
-            System.out.print(j + " ");
+//        Arrays.sort(arr, (o1, o2) -> -o1.compareTo(o2));
+//        for (int j : arr)
+//            System.out.print(j + " ");
 
     }
 }
