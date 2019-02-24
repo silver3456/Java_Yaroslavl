@@ -15,7 +15,7 @@ public class ArraySortArrays_Descending {
         System.out.println();
 
         //Sort descending
-        Arrays.sort(arr, Collections.reverseOrder());
+        Arrays.sort(arr, Collections.reverseOrder()); // Should be Integer
 
         for (int i = 0; i < arr.length; i++)
             System.out.print(arr[i] + " ");
