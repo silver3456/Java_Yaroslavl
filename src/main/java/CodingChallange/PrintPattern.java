@@ -7,7 +7,7 @@ package CodingChallange;
 //1 2 3 4 5
 
 
-public class Draft {
+public class PrintPattern {
     public static void main(String[] args) {
         for (int x = 1; x <= 5; x++) {
             for (int y = 1; y <= x; y++) {
