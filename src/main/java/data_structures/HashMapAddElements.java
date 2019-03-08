@@ -3,7 +3,7 @@ package data_structures;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HashMap1 {
+public class HashMapAddElements {
 
     public static void main(String[] args) {
 
