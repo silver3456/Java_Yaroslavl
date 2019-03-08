@@ -1,4 +1,4 @@
-package data_structures;
+package data_structures.Map;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,6 +24,6 @@ public class HashMapReplaceElements {
         for(Map.Entry m : hm.entrySet()){
             System.out.println(m.getKey() + " " + m.getValue());
         }
-        
+
     }
 }
