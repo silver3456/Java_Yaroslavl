@@ -17,12 +17,8 @@ public class MapIteratorExample {
 
         Iterator<Entry<Integer, String>> iter = map.entrySet().iterator();
         while (iter.hasNext()) {
-            Entry<Integer, String> entry = iter.next();
-
-            int key = entry.getKey();
-            String value = entry.getValue();
-
-            System.out.println(key + " " + value);
+            Entry entry = iter.next();
+            System.out.println(entry.getKey() + " " + entry.getValue());
         }
     }
 }
