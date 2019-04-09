@@ -6,7 +6,7 @@ package CodingChallange;
 public class PerfectNumbers {
     public static boolean isPerfect(int number) {
         int temp = 0;
-        for (int i = 1; i <= number / 2; i++) {
+        for (int i = 1; i < number; i++) {
             if (number % i == 0) {
                 temp += i;
             }
