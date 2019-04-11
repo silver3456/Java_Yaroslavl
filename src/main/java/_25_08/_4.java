@@ -28,6 +28,7 @@ public class _4 {
 
     public static int randomize(int min, int max) {
         return (int) (Math.random() * (max - min + 1) + min);
+
     }
 
     public static Integer sumOfLines(int a[][]) {
