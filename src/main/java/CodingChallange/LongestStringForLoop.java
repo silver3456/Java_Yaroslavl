@@ -4,18 +4,18 @@ public class LongestStringForLoop {
 
     public static void main(String[] args) {
 
-        String[] words = {"Alex", "Ben", "Mister"};
+        String[] words = {"Alex", "Ben", "Mister", "GreatBritain"};
 
         int index = 0;
-        int elementLength = words[0].length();
+        int maxLength = words[0].length();
 
         for (int i = 1; i < words.length; i++) {
-            if (words[i].length() > elementLength) {
+            if (words[i].length() > maxLength) {
+                maxLength = words[i].length();
                 index = i;
-                elementLength = words[i].length();
             }
         }
-        System.out.println(words[index]);
+        System.out.println("Longest word is " + words[index]);
 
     }
 
