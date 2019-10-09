@@ -8,4 +8,6 @@ public interface IFinance {
     void showCourses();
 
     void payTution(int amount);
+
 }
+

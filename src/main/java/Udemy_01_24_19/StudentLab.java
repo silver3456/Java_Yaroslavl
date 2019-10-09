@@ -39,6 +39,7 @@ class Student implements IFinance {
         this.SSN = SSN;
         setEmailId();
         setUserId();
+
     }
 
     public String getName() {

@@ -1,5 +1,7 @@
 package _12082018;
 
+import java.util.HashMap;
+
 public class Wolf {
     private String name;
     private WolfSex sex;
@@ -21,4 +23,6 @@ public class Wolf {
     public String getName() {
         return name;
     }
+
+
 }

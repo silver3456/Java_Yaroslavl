@@ -10,6 +10,7 @@ public class HashMapMethods {
         mapIndexName.put(1, "Alex");
         mapIndexName.put(2, "Max");
 
+
         //get key by value
 
         for (Map.Entry entry : mapIndexName.entrySet()) {

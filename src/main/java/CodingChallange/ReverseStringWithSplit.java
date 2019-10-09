@@ -5,7 +5,7 @@ package CodingChallange;
 public class ReverseStringWithSplit {
     public static void main(String[] args) {
 
-        String word = "Alex";
+        String word = "Saiya";
         String[] letter = word.split("");
 
         for (int i = word.length() - 1; i >= 0; i--) {
