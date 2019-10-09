@@ -1,8 +1,9 @@
 package CodingChallange;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
-public class CountOccurencesHashMap {
+public class CountOccurencesHashMapReader {
 
     public static void main(String[] args) {
 
