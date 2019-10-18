@@ -22,6 +22,10 @@ public class HashSetIterator {
         // Creating an iterator
         Iterator value = set.iterator();
 
+        while (value.hasNext()) {
+            System.out.println("Next value is: " + value.next());
+        }
+
 
         // Displaying the values after iterating through the set
         System.out.println("The iterator values are: ");
@@ -32,6 +36,8 @@ public class HashSetIterator {
                 value.remove();
                 System.out.println("After element removal" + set);
             }
+
+
 
         }
 
