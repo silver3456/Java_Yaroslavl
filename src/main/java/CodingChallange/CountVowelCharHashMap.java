@@ -25,6 +25,8 @@ public class CountVowelCharHashMap {
             }
         }
 
+        System.out.println("Number of vowels = " + mapOfLetters.size());
+
         for (Map.Entry<Character, Integer> entry : mapOfLetters.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue().toString());
         }
