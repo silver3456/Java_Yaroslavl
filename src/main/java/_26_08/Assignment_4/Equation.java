@@ -17,7 +17,7 @@ public class Equation {
         System.out.println("Input c");
         c = sc.nextDouble();
 
-        System.out.println(a + "x^2 + " + b + "x + " + c + " = 0");
+        System.out.println(a + "X^2 + " + b + "X + " + c + " = 0");
 
         double disc = b * b - 4 * a * c;
 
