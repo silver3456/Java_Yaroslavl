@@ -1,0 +1,56 @@
+package tests.kaiser;
+
+import cucumber.api.java.eo.Do;
+
+import java.util.ArrayList;
+import java.util.function.Predicate;
+
+public class TestDogs {
+    public static void main(String[] args) {
+        ArrayList<Dog> dogs = new ArrayList<>();
+        dogs.add(new Dog("boi", 30, 6));
+        dogs.add(new Dog("charis", 120, 7));
+        dogs.add(new Dog("clover", 35, 12));
+        dogs.add(new Dog("zooey", 45, 8));
+        dogs.add(new Dog("tyri", 40, 12));
+        dogs.add(new Dog("aiko", 50, 10));
+        dogs.add(new Dog("mia", 15, 4));
+
+        System.out.println("all dogs " + dogs);
+        System.out.println("min age 7 " + minAge(dogs, 7).toString());
+        System.out.println("max wght. " + magWeight(dogs, 40).toString());
+
+        System.out.println(dogQuerior(dogs, d -> d.getAge() < 9 ));
+        System.out.println(dogQuerior(dogs, d -> d.getWeight() > 100));
+    }
+
+    static ArrayList<Dog> minAge (ArrayList<Dog> dogList, int testFor) {
+        ArrayList<Dog> result1 = new ArrayList<>();
+        for (Dog d : dogList) {
+            if(d.getAge() >= testFor) {
+                result1.add(d);
+            }
+        }
+        return result1;
+    }
+
+    static ArrayList<Dog> magWeight (ArrayList<Dog> dogList, int testFor) {
+        ArrayList<Dog> result1 = new ArrayList<>();
+        for (Dog d : dogList) {
+            if(d.getWeight() <= testFor) {
+                result1.add(d);
+            }
+        }
+        return result1;
+    }
+
+    static ArrayList<Dog> dogQuerior(ArrayList<Dog> dogList, Predicate<Dog> expr) {
+        ArrayList<Dog> result1 = new ArrayList<>();
+        for (Dog d : dogList) {
+            if (expr.test(d)) {
+                result1.add(d);
+            }
+        }
+        return result1;
+    }
+}
