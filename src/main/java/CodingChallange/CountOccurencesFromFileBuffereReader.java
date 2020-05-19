@@ -19,7 +19,7 @@ public class CountOccurencesFromFileBuffereReader {
         String sentence = contentBuilder.toString();
 
 
-        String[] wordsArray = sentence.split(",");
+        String[] wordsArray = sentence.split(" ");
 
         Map<String, Integer> mapOfWords = new HashMap<>();
         int count;

@@ -19,7 +19,7 @@ public class CountOccurencesVowelsHashMap {
 
         String[] lettersArray = sentence.split("");
 
-        Map<String, Integer> mapOfLetters = new HashMap<>();
+       // Map<String, Integer> mapOfLetters = new HashMap<>();
         int count = 0;
 
         for (int i = 0; i < lettersArray.length; ++i) {

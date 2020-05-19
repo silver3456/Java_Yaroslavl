@@ -10,7 +10,7 @@ public class Fibonacci {
         int prevNum = 0;
         int nextNum = 1;
 
-        for (int i = 1; i <= max; i++) {
+        for (int i = 0; i <= max; i++) {
             System.out.print(prevNum + " ");
 
             /* On each iteration, we are assigning second number

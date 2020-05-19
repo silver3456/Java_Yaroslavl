@@ -3,7 +3,7 @@ package CodingChallange;
 public class ReverseInteger {
     public static void main(String[] args) {
 
-        int number = 120;
+        int number = 128;
         int reverse = 0;
 
         while (number != 0) {
