@@ -1,5 +1,6 @@
+package CodingChallange;
 
-        import java.util.HashMap;
+import java.util.HashMap;
         import java.util.Map;
 
 /**
@@ -9,7 +10,7 @@
  * Example: 12365456: 6 => 2
  */
 
-public class NumOfOccurences {
+class NumOfOccurences {
     public static void main(String[] args) {
 
         int num = 1236545666;

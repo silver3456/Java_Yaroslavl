@@ -3,8 +3,8 @@ package CodingChallange;
 
 public class Draft2 {
 
-    public static void main(String[] args) {
-
+    public static int getSum(int a, int b) {
+        return a + b;
     }
 
 }

@@ -4,7 +4,7 @@ import java.util.*;
 
 public class CountOccurencesHashMap {
 
-   public static void main(String[] args) {
+    public static void main(String[] args) {
 
         String[] arr = {"Alex", "Ben", "Alex", "Alex", "Ben", "Dan"};
 
@@ -24,6 +24,6 @@ public class CountOccurencesHashMap {
         for (Map.Entry entry : mapOfNames.entrySet()) {
             System.out.println(entry);
         }
-       }
     }
 }
+

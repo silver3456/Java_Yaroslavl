@@ -8,7 +8,7 @@ public class PredicateEx2 {
     public static void main(String[] args) {
         List<Man> persons = ManFactory.createMen();
         List<Man> filteredList = getFilteredPerson(persons, PersonPredicates.malePersonPredicate
-                .or(PersonPredicates.agePersonPredicate));
+                .and(PersonPredicates.agePersonPredicate));
         filteredList.forEach(System.out::println);
     }
 
