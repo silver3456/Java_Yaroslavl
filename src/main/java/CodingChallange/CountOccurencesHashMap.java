@@ -22,7 +22,7 @@ public class CountOccurencesHashMap {
         }
 
         for (Map.Entry entry : mapOfNames.entrySet()) {
-            System.out.println(entry);
+            System.out.println(entry.getKey() + " " + entry.getValue());
         }
     }
 }

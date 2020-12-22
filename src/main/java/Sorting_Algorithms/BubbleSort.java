@@ -8,6 +8,7 @@ package Sorting_Algorithms;
 public class BubbleSort {
     public static void main(String[] args) {
         int[] arr = {20, 4, 3, 6, 75, 7, 1, 10, 10};
+
         for (int j = 0; j < arr.length; j++) {
             for (int i = 0; i < arr.length - 1; i++) {
                 int num = arr[i];

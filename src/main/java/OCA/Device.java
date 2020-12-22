@@ -1,8 +1,8 @@
-package OCA;
-
-public interface Device {
-    default void m2() {
-        System.out.println("in Device");
-    }
-//    void doIt();
-}
+//package OCA;
+//
+//public interface fDevice {
+//    default void m2() {
+//        System.out.println("in Device");
+//    }
+////    void doIt();
+//}

@@ -2,5 +2,9 @@ package OCA;
 
 public interface Gadget {
 
-    void doStuff();
+    String NAME = "";
+
+    default void doStuff() {
+        System.out.println("Gadget");
+    }
 }

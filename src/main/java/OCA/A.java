@@ -1,12 +1,14 @@
 package OCA;
 
-public class A {
+import OCA.failed_exam2.AA;
 
-    public A() {
-        this("foo");
+public class A extends AA {
+
+    public static void main(String[] args) {
+
+        AA a = new A();
+        a.age = 9;
     }
 
-    A(String s) {
 
-    }
 }
