@@ -10,19 +10,17 @@ public class CountOccurencesHashMap {
 
 
         Map<String, Integer> mapOfNames = new HashMap<>();
-        int count;
 
         for (String name : arr) {
             if (mapOfNames.containsKey(name)) {
-                count = mapOfNames.get(name);
-                mapOfNames.put(name, count + 1);
+                mapOfNames.put(name, mapOfNames.get(name) + 1);
             } else {
                 mapOfNames.put(name, 1);
             }
         }
 
         for (Map.Entry entry : mapOfNames.entrySet()) {
-            System.out.println(entry);
+            System.out.println(entry.getKey() + " " + entry.getValue());
         }
     }
 }

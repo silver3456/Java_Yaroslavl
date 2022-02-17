@@ -10,7 +10,7 @@ public class CountVowlesCharArr {
 
         char[] arr = sentence.toCharArray();
 
-        Map<Character, Integer> mapOfLetters = new HashMap<Character, Integer>();
+        Map<Character, Integer> mapOfLetters = new HashMap<>();
         int count;
 
 

@@ -49,7 +49,7 @@ public class MaxMinArray {
 
 
         int min = arr[arr.length - 1];
-        System.out.println("Minimum value is: " + min);
+        System.out.println("TwoSumHashMap value is: " + min);
 
         return min;
     }

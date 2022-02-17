@@ -11,6 +11,10 @@ public class TwoSum {
     return [0, 1].
      */
 
+    /*
+    Solution is bad because time complex is O(n^2)
+     */
+
 
     public static void main(String[] args) {
 

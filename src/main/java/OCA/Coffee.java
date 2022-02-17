@@ -1,28 +1,25 @@
 package OCA;
 
-public class Coffee {
+public class Coffee extends Plant{
 
-    private CoffeeSize size;
-
+    void run() {
+        System.out.println("Coffee");
+    }
 
     public static void main(String[] args) {
+        Plant p1 = new Java();
+        Plant p2 = new Coffee();
+        Plant p3 = new Java();
+        p1 = (Coffee)p3;
+        Plant p4 = (Coffee)p3;
+        Coffee p6 = (Java)p2;
 
-      Coffee drink = new Coffee();
-      drink.size = CoffeeSize.HUGE;
-
-        System.out.println(drink.size.getOunces());
-
-        for (CoffeeSize cs : CoffeeSize.values()) {
-            System.out.println(cs + " " + cs.getOunces());
-        }
-
-        Coffee drink2 = new Coffee();
-        drink2.size = CoffeeSize.OVERWHELMING;
-
-        System.out.println(drink2.size.getLidCode());
-
-
+        Plant p5 = (Java)p2;
+        p1.run();
+        p4.run();
+        p5.run();
     }
+
 
 
 }
