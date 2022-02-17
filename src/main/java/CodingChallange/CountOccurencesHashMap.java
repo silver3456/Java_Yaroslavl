@@ -10,12 +10,10 @@ public class CountOccurencesHashMap {
 
 
         Map<String, Integer> mapOfNames = new HashMap<>();
-        int count;
 
         for (String name : arr) {
             if (mapOfNames.containsKey(name)) {
-                count = mapOfNames.get(name);
-                mapOfNames.put(name, count + 1);
+                mapOfNames.put(name, mapOfNames.get(name) + 1);
             } else {
                 mapOfNames.put(name, 1);
             }

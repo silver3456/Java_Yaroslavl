@@ -33,9 +33,11 @@ public class TwoSum {
     public static void main(String[] args) {
 
         int[] numbers = new int[]{2, 8, 7, 11, 15};
-        int[] indices = twoSum(numbers, 13);
-        Arrays.stream(indices).forEach(System.out::println);
+        int[] indices = twoSum(numbers, 16);
 
+        for (int i: indices) {
+            System.out.println(i);
+        }
 
     }
 

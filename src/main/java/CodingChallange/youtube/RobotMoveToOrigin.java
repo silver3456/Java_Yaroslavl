@@ -8,7 +8,7 @@ https://www.youtube.com/watch?v=lk5L_GsZFSw
 public class RobotMoveToOrigin {
     public static void main(String[] args) {
 
-        System.out.println(judgeCircle("RLDUUULL"));
+        System.out.println(judgeCircle("RRLL"));
 
     }
 

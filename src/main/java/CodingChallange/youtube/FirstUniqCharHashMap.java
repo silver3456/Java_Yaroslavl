@@ -10,7 +10,7 @@ import java.util.Map;
 public class FirstUniqCharHashMap {
     public static void main(String[] args) {
 
-        System.out.println(firstUniqChar("eetcode"));
+        System.out.println(firstUniqChar("etcode"));
 
     }
 

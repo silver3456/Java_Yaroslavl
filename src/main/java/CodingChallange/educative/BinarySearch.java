@@ -4,6 +4,8 @@ package CodingChallange.educative;
 // Binary search runs in O(log(n))O(log(n))
 
 public class BinarySearch {
+
+
     public static void main(String[] args) {
         int arr[] = {1, 6, 9, 45, 89, 0};
 //        int arr[] = {};
